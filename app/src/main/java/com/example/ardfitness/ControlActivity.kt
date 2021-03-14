@@ -28,7 +28,7 @@ class ControlActivity: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        setContentView(R.layout.control_layout)
+        setContentView(R.layout.ard_control)
 //        m_address = intent.getStringExtra(SelectDeviceActivity.EXTRA_ADDRESS)
 //
 //        ConnectToDevice(this).execute()
@@ -63,11 +63,7 @@ class ControlActivity: AppCompatActivity() {
 
     private class ConnectToDevice(c: Context) : AsyncTask<Void, Void, String>() {
         private var connectSuccess: Boolean = true
-        private val context: Context
-
-        init {
-            this.context = c
-        }
+        private val context: Context = c
 
         override fun onPreExecute() {
             super.onPreExecute()
