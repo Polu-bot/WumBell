@@ -1,4 +1,4 @@
-package com.example.ardfitness.bleconnect
+package com.example.wumbell.bleconnect
 
 import android.app.Application
 import androidx.lifecycle.ViewModel

@@ -1,4 +1,4 @@
-package com.example.ardfitness.bleconnect
+package com.example.wumbell.bleconnect
 
 import android.app.Activity
 import android.bluetooth.BluetoothAdapter
@@ -10,15 +10,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.Toast
-import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.fragment.findNavController
-import com.example.ardfitness.ControlActivity
-import com.example.ardfitness.R
-import com.example.ardfitness.databinding.DeviceListBinding
+import com.example.wumbell.R
+import com.example.wumbell.databinding.DeviceListBinding
 
 class ConnectBle : Fragment(){
     private lateinit var selectDeviceRefresh : Button
@@ -36,13 +32,13 @@ class ConnectBle : Fragment(){
         val binding=DataBindingUtil.inflate<DeviceListBinding>(inflater,R.layout.device_list, container, false)
         selectDeviceRefresh=binding.pairedbutton
         val application = requireNotNull(this.activity).application
-        val viewModelFactory =ConnectBleViewModelFactory(application)
+        val viewModelFactory = ConnectBleViewModelFactory(application)
         viewModel= ViewModelProvider(this, viewModelFactory).get(ConnectBleViewModel::class.java)
         enableBle()
         val listView=binding.listView
         selectDeviceRefresh.setOnClickListener{ viewModel.pairedDeviceList() }
         binding.lifecycleOwner = this
-        val adapter=BluetoothListAdapter(ClickListener { ble: BluetoothDevice ->
+        val adapter= BluetoothListAdapter(ClickListener { ble: BluetoothDevice ->
             viewModel.onListClicked(ble)
             Toast.makeText(context,ble.name, Toast.LENGTH_SHORT).show()
         })

@@ -1,4 +1,4 @@
-package com.example.ardfitness
+package com.example.wumbell
 
 import android.app.Activity
 import android.app.ProgressDialog

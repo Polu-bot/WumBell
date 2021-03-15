@@ -1,4 +1,4 @@
-package com.example.ardfitness.bleconnect
+package com.example.wumbell.bleconnect
 
 import android.app.Application
 import android.bluetooth.BluetoothAdapter
@@ -32,7 +32,6 @@ class ConnectBleViewModel(application: Application): AndroidViewModel(applicatio
                 Log.i("device", ""+device)
             }
             _bleList.value=list
-            Toast.makeText(getApplication(), list.toString(), Toast.LENGTH_SHORT).show()
 
         } else {
             Toast.makeText(getApplication(),"No paired bluetooth devices found", Toast.LENGTH_SHORT).show()

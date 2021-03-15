@@ -10,7 +10,7 @@
             type="android.bluetooth.BluetoothDevice" />
         <variable
             name="click"
-            type="com.example.ardfitness.bleconnect.ClickListener" />
+            type="com.example.wumbell.bleconnect.ClickListener" />
     </data>
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
