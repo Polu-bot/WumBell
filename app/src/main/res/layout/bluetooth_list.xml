@@ -34,6 +34,7 @@
         android:textAllCaps="true"
         android:textColor="@color/black"
         android:textSize="20sp"
+        tools:text="jnvsivaj"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.529"
@@ -42,11 +43,12 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="70dp"
-        android:layout_height="76dp"
+        android:padding="8dp"
+        android:layout_width="62dp"
+        android:layout_height="59dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_launcher_foreground"
+        app:srcCompat="@drawable/ic_baseline_bluetooth_24"
         tools:ignore="VectorDrawableCompat" />
 </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

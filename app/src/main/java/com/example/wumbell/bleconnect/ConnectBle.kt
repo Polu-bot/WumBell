@@ -36,6 +36,7 @@ class ConnectBle : Fragment(){
         viewModel= ViewModelProvider(this, viewModelFactory).get(ConnectBleViewModel::class.java)
         enableBle()
         val listView=binding.listView
+        viewModel.pairedDeviceList()
         selectDeviceRefresh.setOnClickListener{ viewModel.pairedDeviceList() }
         binding.lifecycleOwner = this
         val adapter= BluetoothListAdapter(ClickListener { ble: BluetoothDevice ->

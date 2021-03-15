@@ -3,10 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/navigation"
     app:startDestination="@id/connectBle">
 
-    <activity
-        android:id="@+id/controlActivity"
-        android:name="com.example.wumbell.ControlActivity"
-        android:label="ControlActivity" />
     <fragment
         android:id="@+id/connectBle"
         android:name="com.example.wumbell.bleconnect.ConnectBle"
