@@ -1,5 +1,6 @@
-package com.appsinthesky.bluetoothtutorial
+package com.example.ardfitness
 
+import android.app.Activity
 import android.app.ProgressDialog
 import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothDevice
@@ -10,12 +11,12 @@ import java.util.*
 import android.bluetooth.BluetoothSocket
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import com.example.ardfitness.R
+import androidx.fragment.app.Fragment
 import java.io.IOException
 
 
 
-class ControlActivity: AppCompatActivity() {
+class ControlActivity: Activity() {
 
     companion object {
         var m_myUUID: UUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB")
@@ -28,7 +29,7 @@ class ControlActivity: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.ard_control)
+//        setContentView(R.layout.ard_control)
 //        m_address = intent.getStringExtra(SelectDeviceActivity.EXTRA_ADDRESS)
 //
 //        ConnectToDevice(this).execute()
@@ -58,7 +59,7 @@ class ControlActivity: AppCompatActivity() {
                 e.printStackTrace()
             }
         }
-        finish()
+//        finish()
     }
 
     private class ConnectToDevice(c: Context) : AsyncTask<Void, Void, String>() {

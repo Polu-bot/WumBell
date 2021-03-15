@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/navigation"
-    app:startDestination="@id/controlActivity">
+    app:startDestination="@id/connectBle">
 
     <activity
         android:id="@+id/controlActivity"
-        android:name="com.appsinthesky.bluetoothtutorial.ControlActivity"
+        android:name="com.example.ardfitness.ControlActivity"
         android:label="ControlActivity" />
+    <fragment
+        android:id="@+id/connectBle"
+        android:name="com.example.ardfitness.bleconnect.ConnectBle"
+        android:label="ConnectBle" />
 </navigation>

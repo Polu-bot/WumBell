@@ -1,4 +1,4 @@
-package com.example.ardfitness
+package com.example.ardfitness.bleconnect
 
 import android.bluetooth.BluetoothDevice
 import android.view.LayoutInflater
@@ -43,7 +43,7 @@ class BluetoothListAdapter(val clickListner: ClickListener): ListAdapter<Bluetoo
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         when(holder){
-            is ViewHolder->{
+            is ViewHolder ->{
                 val item=getItem(position)
                 holder.bind(item,clickListner)
             }
