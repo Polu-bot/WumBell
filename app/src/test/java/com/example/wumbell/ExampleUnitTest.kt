@@ -1,4 +1,4 @@
-package com.example.ardfitness
+package com.example.wumbell
 
 import org.junit.Test
 
